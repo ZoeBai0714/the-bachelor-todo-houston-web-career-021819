@@ -45,5 +45,15 @@ def get_occupation(data, hometown)
 end
 
 def get_average_age_for_season(data, season)
-  # code here
+  age = []
+  data.each do |each_season, info| 
+    if each_season.to_s == season
+     info.each do |element|
+       if element["status"] == "Winner"
+        return element["name"].split(" ")[0]
+      end
+    end
+   end 
+  end
+   
 end
