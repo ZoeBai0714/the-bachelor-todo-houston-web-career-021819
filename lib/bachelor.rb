@@ -54,11 +54,8 @@ def get_average_age_for_season(data, season)
    end 
   end
    
-  i = 0
-  average_age = 0
-  while i < age.length
-   average_age += age[i].to_i
-   i + 1
+  age.collect do |num|
+    age += num.to_i
   end
- return average_age / i
+  return age
 end
