@@ -45,7 +45,6 @@ def get_occupation(data, hometown)
 end
 
 def get_average_age_for_season(data, season)
-  age = []
   data.each do |each_season, info| 
     if each_season.to_s == season
      info.each do |element|
@@ -54,6 +53,7 @@ def get_average_age_for_season(data, season)
    end 
   end
    
+  age = 0
   age.collect do |num|
     age += num.to_i
   end
