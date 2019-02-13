@@ -13,11 +13,10 @@ end
 
 def get_contestant_name(data, occupation)
   data.each do |each_season, info| 
-    if each_season.to_s == season
      info.each do |element|
        if element["occupation"] == occupation
         return element["name"]
-      end
+      
     end
    end 
   end
