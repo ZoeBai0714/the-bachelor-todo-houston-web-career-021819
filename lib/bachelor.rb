@@ -15,8 +15,8 @@ def get_contestant_name(data, occupation)
   data.each do |each_season, info| 
     if each_season.to_s == season
      info.each do |element|
-       if element["status"] == "Winner"
-        return element["name"].split(" ")[0]
+       if element["occupation"] == occupation
+        return element["name"]
       end
     end
    end 
