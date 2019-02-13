@@ -49,11 +49,16 @@ def get_average_age_for_season(data, season)
   data.each do |each_season, info| 
     if each_season.to_s == season
      info.each do |element|
-       if element["status"] == "Winner"
-        return element["name"].split(" ")[0]
-      end
+      age << element["age"]
     end
    end 
   end
    
+  i = 0
+  average_age = 0
+  while i < age.length
+   average_age += age[i]
+   i + 1
+  end
+  return average_age / i
 end
